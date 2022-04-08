@@ -1,0 +1,39 @@
+/**
+ * Site footer
+ */
+ .site-footer {
+    border-top: 1px solid grey;
+    padding: 0px;
+  }
+  
+  .footer-heading {
+    margin-bottom: 4px;
+  }
+  
+  .contact-list,
+  .social-media-list {
+    list-style: none;
+    margin-left: 0;
+  }
+  
+  .footer-col-wrapper {
+    color: grey;
+  }
+  
+  .footer-col {
+    float: left;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-col-1 {
+    width: 35%;
+  }
+  
+  .footer-col-2 {
+    width: 20%;
+  }
+  
+  .footer-col-3 {
+    width: 45%;
+  }
