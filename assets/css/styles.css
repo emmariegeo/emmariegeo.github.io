@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-color: #cdfff3;
+  background-color: #fff;
   min-height: 100vh;
   font-family: 'Montserrat';
   overflow: hidden;
@@ -123,6 +123,17 @@ body {
   text-align: center;
   order: 1;
 }
+.profileframe {
+  flex-basis: auto;
+  display: flex;
+  width: auto;
+  padding-left: 1%;
+  padding-right: 1%;
+  flex-direction: column;
+  text-align: center;
+  order: 2;
+}
+
 
 .hero-text {
   font-size: 4.2rem;
