@@ -94,15 +94,26 @@ body {
   flex: 1 100%;
 }
 
-.section {
+section {
   width: 100vw;
-  padding: 10vh;
   display: flex;
-  flex-direction: row;
   align-content: center;
   align-items: center;
   justify-content: center;
   animation: slideInAnim 1s ease-in-out 0s 1 normal forwards;
+}
+section.home {
+  flex-direction: row;
+  padding: 10vh;
+}
+section.project {
+  margin-top: 80px;
+  flex-direction: column;
+  gap: 1%;
+}
+section.myprojects {
+  margin-top: 80px;
+  flex-direction: column;
 }
 
 .tree {
@@ -148,6 +159,94 @@ body {
   text-align: center;
   letter-spacing: normal;
 }
+/* GALLERY */
+.gallery {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  padding: 2% 0%;
+  column-gap: 5%;
+  background-color: #c5f5f2;
+  width: 100vw;
+  overflow: hidden;
+  justify-content: space-around;
+}
+
+.gallery li {
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 350px;
+  column-gap: 20px;
+  cursor: pointer;
+  position: relative;
+  padding: 30px;
+  top: 0;
+  transition: all .1s ease-in;
+}
+
+.gallery li .preview {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.gallery .title {
+  text-align: center;
+  align-items: top;
+  padding: 1%;
+}
+
+.gallery ul {
+  list-style: none;
+  padding: 1%;
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+   
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+
+.gallery li .card-title {
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.gallery li .p {
+  line-height: 1.8;
+}
+
+.gallery li .card-desc {
+  height: 100px;
+  width: auto;
+  font-size: smaller;
+  padding: 1%;
+  text-align: center;
+  justify-content: center;
+}
+.gallery li a {
+  text-decoration: none;
+}
+.gallery li a:visited {
+  color:#000;
+}
+
+.gallery li:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
 
 /* Font */
 h1 {
@@ -174,7 +273,7 @@ h2 {
 @keyframes slideInAnim {
   0% {
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(100px);
   }
 
   100% {
@@ -205,7 +304,7 @@ h2 {
 /* RESPONSIVE */
 /* Small Screen */
 @media only screen and (max-width: 1000px) {
-  .section {
+  section {
     flex-direction: column;
     padding: 5vh;
     justify-content: space-around;
@@ -243,7 +342,7 @@ h2 {
 
 /* MOBILE */
 @media only screen and (max-width: 720px) {
-  .section {
+  section {
     flex-direction: column;
     padding: 5vh;
     justify-content: space-around;
