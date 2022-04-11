@@ -12,7 +12,7 @@ body {
   overflow-x: clip;
   overflow-y: auto;
 }
-/* Header */
+/* HEADER */
 .site-header {
   width: 100vw;
   position: -webkit-sticky;
@@ -23,7 +23,7 @@ body {
   z-index: 5;
 }
 
-/* Navigation */
+/* NAVIGATION */
 .navbar {
   display: grid;
   grid-template-columns: 3fr 3fr;
@@ -80,7 +80,7 @@ body {
   color: #3498db;
 }
 
-/* Menu toggle */
+/* NAV MENU TOGGLE */
 .menu-toggle {
   justify-self: end;
   margin-right: 40px;
@@ -102,6 +102,7 @@ section {
   align-items: center;
   justify-content: center;
 }
+/* HOME PAGE */
 section.home {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -111,26 +112,36 @@ section.home {
   animation: slideUpAnim 1s ease-in-out 0s 1 normal forwards;
 }
 
-
-section.project {
-  margin-top: 80px;
-  flex-direction: column;
-  gap: 1%;
-}
-section.myprojects {
-  margin-top: 80px;
-  flex-direction: column;
-  animation: slideUpAnim 1s ease-in-out 0s 1 normal forwards;
-}
-
 .tree {
   display: flex;
-  max-height: 80vh;
+  max-height: 70vh;
   min-height: 50vh;
   width: auto;
   order: 2;
 }
-/* About */
+.welcome {
+  flex-basis: auto;
+  display: flex;
+  width: auto;
+  padding-right: 5%;
+  flex-direction: column;
+  text-align: right;
+  order: 1;
+}
+.hero-text {
+  font-size: 4.2rem;
+  font-weight: 300;
+  letter-spacing: .4rem;
+  text-align: match-parent;
+}
+.subtitle-text {
+  font-size: 3.4rem;
+  font-weight: 100;
+  letter-spacing: normal;
+  text-align: match-parent;
+}
+
+/* ABOUT */
 section.about {
   display: grid;
   background-color: rgba(213, 248, 231);
@@ -162,28 +173,67 @@ section.about .info {
   height: 100%;
   text-align: left;
 }
-
-/* Home */
-.welcome {
-  flex-basis: auto;
+section.about .info p {
+  padding: 2%;
+}
+section.about ul {
   display: flex;
-  width: auto;
-  padding-right: 5%;
   flex-direction: column;
-  text-align: right;
-  order: 1;
+  list-style: none;
 }
-.hero-text {
-  font-size: 4.2rem;
-  font-weight: 300;
-  letter-spacing: .4rem;
-  text-align: match-parent;
+
+section.about h4 {
+  padding: 1% 0%;
 }
-.subtitle-text {
-  font-size: 3.4rem;
-  font-weight: 100;
-  letter-spacing: normal;
-  text-align: match-parent;
+
+/* PROJECT PAGE */
+section.project {
+  margin-top: 80px;
+  flex-direction: column;
+  gap: 1%;
+}
+
+section.project ul {
+  list-style: none;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+  padding: 4%;
+  grid-gap: .8rem;
+}
+
+section.project .post-content {
+  display: grid;
+  background-color: rgba(213, 248, 231);
+  grid-template-columns: 1fr 3fr;
+  width: 100vw;
+  padding: 4% 8%;
+  grid-gap: 2rem;
+  overflow: hidden;
+  align-items: center;
+  justify-items: center;
+  animation: slideUpAnim 1s ease-in-out 0s 1 normal forwards;
+}
+section.project .post-content ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 8%;
+}
+section.project .post-content img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+}
+section.project p {
+  text-align: center;
+}
+/** PROJECTS **/
+section.myprojects {
+  margin-top: 80px;
+  flex-direction: column;
+  animation: slideUpAnim 1s ease-in-out 0s 1 normal forwards;
 }
 /* GALLERY */
 .gallery {
@@ -197,6 +247,13 @@ section.about .info {
   overflow: hidden;
   justify-items: center;
   align-items: center;
+}
+.gallery ul {
+  list-style: none;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+  grid-gap: 1.2rem;
 }
 
 .gallery ul li {
@@ -229,21 +286,11 @@ section.about .info {
   text-transform: uppercase;
 }
 
-
 .categoryTitle {
   text-align: center;
   align-items: top;
   padding: 2%
 }
-
-.gallery ul {
-  list-style: none;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
-  grid-gap: 1.2rem;
-}
-
 
 .gallery ul li p {
   line-height: 1.8;
@@ -282,7 +329,6 @@ h3 {
   font-weight: 400;
 }
 
-
 .title-group {
   text-align: center;
   z-index: 1;
@@ -306,14 +352,6 @@ h3 {
     transform: translateY(0px);
   }
 }
-.tree {
-  display: flex;
-  max-height: 70vh;
-  min-height: 50vh;
-  width: auto;
-  order: 2;
-}
-
 
 /* RESPONSIVE */
 /* Small Screen */
@@ -388,6 +426,7 @@ h3 {
     padding: 1% 1% 4% 1%;
     width: 20vw;
   }
+  
   section.myprojects {
     margin-top: 0%;
   }
