@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Life Coaching Web Design"
+date:   2022-04-08 13:15:16 -0700
+category: Design
+live-site: https://www.seewithsamantha.com/
+desc: Website Design and logo creation for Life Coaching business.
+previewpic: "assets/images/SEE_Logo_Shine.png"
+---
+Designed and created vector logo using Adobe Illustrator.
+Website designed in Wix.
+

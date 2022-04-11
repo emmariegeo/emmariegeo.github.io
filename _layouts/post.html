@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<section class="project">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -18,6 +19,21 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+  <div>
+    {%- if page.github-repo -%}
+      <li>
+      <a href="{{ page.github-repo }}">
+        <i class="fa-brands fa-github" width="100px" height="100px"></i> <span class="username">{{ page.github-repo }}</span></a>
+      </li>
+    {%- endif -%}
+    {%- if page.live-site -%}
+      <li>
+      <a href="{{ page.live-site }}">
+        Visit live site.
+      </a>
+      </li>
+    {%- endif -%}
+  </div>
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
@@ -25,3 +41,4 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+</div>
