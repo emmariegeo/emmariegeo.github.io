@@ -8,11 +8,8 @@ live-site: https://emmariegeo.github.io/AC-hourly-music/
 desc: Fanmade web app that plays an hourly theme from Animal Crossing and displays a clock based on the user's current time. 
 previewpic: "assets/images/hourlymusicpreview.png"
 ---
-<<<<<<< Updated upstream
-Fanmade web app that plays an hourly theme from Animal Crossing and displays a clock based on the user's current time. 
-=======
 ![hourly music]({{ site.url }}/assets/images/hourlymusicpreview.png "Hourly Music")  
->>>>>>> Stashed changes
 
-Project uses JavaScript, HTML, and CSS.
+* Fanmade web app that plays an hourly theme from Animal Crossing and displays a clock based on the user's current time.
+* JavaScript, HTML, and CSS.  
 

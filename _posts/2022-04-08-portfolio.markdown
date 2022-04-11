@@ -7,9 +7,6 @@ github-repo: https://github.com/emmariegeo/emmariegeo.github.io
 desc: Portfolio website built with Jekyll.
 previewpic: "assets/images/portfolio.png"
 ---
-<<<<<<< Updated upstream
-Project uses JavaScript, HTML, and CSS.
-=======
 ![portfolio]({{ site.url }}/assets/images/portfolio.png "Image")  
 
 * Project uses JavaScript, HTML, and CSS. 
@@ -18,5 +15,3 @@ Project uses JavaScript, HTML, and CSS.
 * Animations done with CSS.
 * Navbar toggle with JavaScript. 
 * Perfect Lighthouse score.
->>>>>>> Stashed changes
-

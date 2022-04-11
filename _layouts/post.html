@@ -5,25 +5,18 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="section-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
   </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-  <div>
+  <div class = "links">
+    <ul>
     {%- if page.github-repo -%}
       <li>
       <a href="{{ page.github-repo }}">
-        <i class="fa-brands fa-github" width="100px" height="100px"></i> <span class="username">{{ page.github-repo }}</span></a>
+        <i class="fa-brands fa-github" width="100px" height="100px"></i> <span class="username">Github Repository</span></a>
       </li>
     {%- endif -%}
     {%- if page.live-site -%}
@@ -33,6 +26,11 @@ layout: default
       </a>
       </li>
     {%- endif -%}
+    </ul>
+  </div>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
   </div>
 
   {%- if site.disqus.shortname -%}
