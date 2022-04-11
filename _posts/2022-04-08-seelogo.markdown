@@ -7,6 +7,13 @@ live-site: https://www.seewithsamantha.com/
 desc: Website Design and logo creation for Life Coaching business.
 previewpic: "assets/images/SEE_Logo_Shine.png"
 ---
+<<<<<<< Updated upstream
 Designed and created vector logo using Adobe Illustrator.
 Website designed in Wix.
+=======
+![Web Design]({{ site.url }}/assets/images/SEE_LOGO_Shine.png "SEE Logo")  
+
+* Designed and created vector logo using Adobe Illustrator.
+* Website designed in Wix.
+>>>>>>> Stashed changes
 
