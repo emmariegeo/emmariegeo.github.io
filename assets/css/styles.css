@@ -9,11 +9,12 @@ body {
   background-color: #fff;
   min-height: 100vh;
   font-family: 'Montserrat';
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: auto;
 }
 /* Header */
 .site-header {
-  width: 100%;
+  width: 100vw;
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
@@ -100,12 +101,17 @@ section {
   align-content: center;
   align-items: center;
   justify-content: center;
-  animation: slideInAnim 1s ease-in-out 0s 1 normal forwards;
 }
 section.home {
-  flex-direction: row;
-  padding: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  overflow: hidden;
+  align-items: center;
+  animation: slideUpAnim 1s ease-in-out 0s 1 normal forwards;
 }
+
+
 section.project {
   margin-top: 80px;
   flex-direction: column;
@@ -114,59 +120,79 @@ section.project {
 section.myprojects {
   margin-top: 80px;
   flex-direction: column;
+  animation: slideUpAnim 1s ease-in-out 0s 1 normal forwards;
 }
 
 .tree {
   display: flex;
-  max-height: 70vh;
+  max-height: 80vh;
   min-height: 50vh;
   width: auto;
   order: 2;
 }
+/* About */
+section.about {
+  display: grid;
+  background-color: #c0f3e8;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  padding: 4% 8%;
+  overflow: hidden;
+  align-items: center;
+  justify-items: center;
+  animation: slideUpAnim 1s ease-in-out 0s 1 normal forwards;
+}
+section.about .card {
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1% 1% 8% 1%;
+  width: 20vw;
+  height: auto;
+  margin: 0 auto;
+}
+section.about .frame {
+  width: 100%;
+  height: auto;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+section.about .info {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
 
+/* Home */
 .welcome {
   flex-basis: auto;
   display: flex;
   width: auto;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-right: 5%;
   flex-direction: column;
-  text-align: center;
+  text-align: right;
   order: 1;
 }
-.profileframe {
-  flex-basis: auto;
-  display: flex;
-  width: auto;
-  padding-left: 1%;
-  padding-right: 1%;
-  flex-direction: column;
-  text-align: center;
-  order: 2;
-}
-
-
 .hero-text {
   font-size: 4.2rem;
   font-weight: 300;
-  text-align: center;
   letter-spacing: .4rem;
+  text-align: match-parent;
 }
-
 .subtitle-text {
   font-size: 3.4rem;
   font-weight: 100;
-  text-align: center;
   letter-spacing: normal;
+  text-align: match-parent;
 }
 /* GALLERY */
 .gallery {
   display: flex;
-  height: fit-content;
+  height: auto;
   flex-direction: column;
-  padding: 2% 0%;
+  padding: 1% 0%;
   column-gap: 5%;
-  background-color: #c5f5f2;
+  background-color: #c0f3e8;
   width: 100vw;
   overflow: hidden;
   justify-content: space-around;
@@ -178,25 +204,29 @@ section.myprojects {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  max-width: 350px;
+  min-width: 200px;
+  max-width: 400px;
   column-gap: 20px;
   cursor: pointer;
   position: relative;
-  padding: 30px;
+  padding: 1%;
   top: 0;
   transition: all .1s ease-in;
 }
 
 .gallery li .preview {
-  padding-bottom: 60%;
+  background-color: rgb(218, 233, 236);
+  width: 100%;
+  height: auto;
+  padding-bottom: 100%;
   background-size: cover;
   background-position: center center;
 }
 
-.gallery .title {
+.categoryTitle {
   text-align: center;
   align-items: top;
-  padding: 1%;
+  padding: 2%
 }
 
 .gallery ul {
@@ -229,6 +259,7 @@ section.myprojects {
 }
 
 .gallery li .card-desc {
+  color: #000;
   height: 100px;
   width: auto;
   font-size: smaller;
@@ -238,6 +269,7 @@ section.myprojects {
 }
 .gallery li a {
   text-decoration: none;
+  color: #000;
 }
 .gallery li a:visited {
   color:#000;
@@ -255,8 +287,14 @@ h1 {
 }
 
 h2 {
-  font-size: 1em;
+  font-weight: 200;
+  font-size: 2em;
 }
+
+h3 {
+  font-weight: 400;
+}
+
 
 .title-group {
   text-align: center;
@@ -270,10 +308,10 @@ h2 {
 
 /* Animations */
 /* KEYFRAME ANIMATIONS */
-@keyframes slideInAnim {
+@keyframes slideUpAnim {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(40px);
   }
 
   100% {
@@ -281,7 +319,6 @@ h2 {
     transform: translateY(0px);
   }
 }
-
 .tree {
   display: flex;
   max-height: 70vh;
@@ -290,47 +327,49 @@ h2 {
   order: 2;
 }
 
-.welcome {
-  flex-basis: auto;
-  display: flex;
-  width: auto;
-  padding-left: 1%;
-  padding-right: 1%;
-  flex-direction: column;
-  text-align: center;
-  order: 1;
-}
 
 /* RESPONSIVE */
 /* Small Screen */
 @media only screen and (max-width: 1000px) {
-  section {
-    flex-direction: column;
-    padding: 5vh;
-    justify-content: space-around;
+  section.home {
+    grid-template-columns: 1fr;
     row-gap: 10px;
     align-content: center;
-    animation: slideInAnim 1s ease-in 0s 1 normal forwards;
+    justify-items: center;
+    animation: slideUpAnim 1s ease-in 0s 1 normal forwards;
     margin-top: 0px;
   }
-
+  section.about {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    align-content: center;
+    justify-items: center;
+    animation: slideUpAnim 1s ease-in 0s 1 normal forwards;
+    margin-top: 0px;
+  }
+  section.about .card {
+    padding: 1% 1% 4% 1%;
+    width: 20vw;
+  }
+  .welcome {
+    padding-right: 0%;
+    padding-top: 5%;
+  }
   .hero-text {
     font-size: 3rem;
-    font-weight: 200;
-    text-align: center;
+    font-weight: 400;
     letter-spacing: .2rem;
   }
 
   .subtitle-text {
     font-size: 2.4rem;
-    font-weight: 400;
-    text-align: center;
+    font-weight: 200;
   }
 
-  @keyframes slideInAnim {
+  @keyframes slideUpAnim {
     0% {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(5px);
     }
 
     100% {
@@ -342,14 +381,28 @@ h2 {
 
 /* MOBILE */
 @media only screen and (max-width: 720px) {
-  section {
-    flex-direction: column;
-    padding: 5vh;
-    justify-content: space-around;
+  section.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    animation: slideUpAnim 1s ease-in 0s 1 normal forwards;
+    margin-top: 0px;
+  }
+  section.about {
+    grid-template-columns: 1fr;
     row-gap: 10px;
     align-content: center;
-    animation: slideInAnim 1s ease-in 0s 1 normal forwards;
+    justify-items: center;
+    animation: slideUpAnim 1s ease-in 0s 1 normal forwards;
     margin-top: 0px;
+  }
+  section.about .card {
+    padding: 1% 1% 4% 1%;
+    width: 20vw;
+  }
+  section.myprojects {
+    margin-top: 0%;
   }
 
   .navbar ul {
@@ -361,8 +414,8 @@ h2 {
     margin-right: 0px;
     top: 80px;
     background-color: #fff;
-    width: 100%;
-    height: calc(100vh - 60px);
+    width: 100vw;
+    height: calc(100vh - 80px);
     transform: translate(-101%);
     text-align: center;
     overflow: hidden;
@@ -371,6 +424,7 @@ h2 {
 
   .navbar .site-title {
     margin-left: 40px;
+    font-size: 1rem;
   }
 
   .navbar li {
@@ -389,23 +443,25 @@ h2 {
     float: none;
   }
 
+  .welcome {
+    padding: 0%;
+  }
   .hero-text {
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 400;
     text-align: center;
     letter-spacing: .2rem;
   }
 
   .subtitle-text {
     font-size: 2.4rem;
-    font-weight: 400;
-    text-align: center;
+    font-weight: 200;
   }
 
-  @keyframes slideInAnim {
+  @keyframes slideUpAnim {
     0% {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(5px);
     }
 
     100% {

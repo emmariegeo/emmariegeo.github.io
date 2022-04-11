@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-<div class="section">
-<div class="welcome">
-  <p><h2 class="page-heading subtitle-text">About me.</h2></p>
-</div>
-<div class="profileframe">
-  {%- if page.profilepic -%}
-  <p><img src='{{ page.profilepic | relative_url }}' width="300px"></p>
-  {%- endif -%}
-  
-</div>
-</div>
+<section class="about">
+    {%- if page.profilepic -%}
+    <div class ="card"><div class="frame" style="background-image: url({{ page.profilepic | relative_url }})"></div></div>
+    {%- endif -%}
+    <div class ="info">
+      <h2>Hi! I'm Emma George.</h2>
+      <h3>Computer Science student and aspiring software developer.</h3>
+      <br>
+      <p>A.S. Computer Science - Foothill College</p>
+    </div>
+</section>
