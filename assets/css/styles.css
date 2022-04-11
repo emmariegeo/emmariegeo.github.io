@@ -133,7 +133,7 @@ section.myprojects {
 /* About */
 section.about {
   display: grid;
-  background-color: #c0f3e8;
+  background-color: rgba(213, 248, 231);
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   padding: 4% 8%;
@@ -192,59 +192,34 @@ section.about .info {
   flex-direction: column;
   padding: 1% 0%;
   column-gap: 5%;
-  background-color: #c0f3e8;
+  background-color: rgba(213, 248, 231);
   width: 100vw;
   overflow: hidden;
-  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
 }
 
-.gallery li {
-  background-color: rgba(255, 255, 255, .9);
+.gallery ul li {
+  background-color: #ffffffe6;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  min-width: 200px;
-  max-width: 400px;
-  column-gap: 20px;
+  max-width: 450px;
+  min-width: 300px;
+  min-height: 200px;
   cursor: pointer;
   position: relative;
   padding: 1%;
   top: 0;
   transition: all .1s ease-in;
 }
-
-.gallery li .preview {
-  background-color: rgb(218, 233, 236);
+.gallery ul li .card-prev {
+  background-color: rgb(218, 236, 229);
   width: 100%;
-  height: auto;
-  padding-bottom: 100%;
+  height: 300px;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-.categoryTitle {
-  text-align: center;
-  align-items: top;
-  padding: 2%
-}
-
-.gallery ul {
-  list-style: none;
-  padding: 1%;
-  width: 90%;
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  justify-items: center;
-   
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-gap: 20px;
-}
-
-
-.gallery li .card-title {
+.gallery ul li .card-title {
   color: #000;
   text-align: center;
   padding: 20px;
@@ -254,28 +229,40 @@ section.about .info {
   text-transform: uppercase;
 }
 
-.gallery li .p {
-  line-height: 1.8;
+
+.categoryTitle {
+  text-align: center;
+  align-items: top;
+  padding: 2%
 }
 
-.gallery li .card-desc {
+.gallery ul {
+  list-style: none;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+  grid-gap: 1.2rem;
+}
+
+
+.gallery ul li p {
+  line-height: 1.8;
   color: #000;
-  height: 100px;
-  width: auto;
   font-size: smaller;
   padding: 1%;
   text-align: center;
-  justify-content: center;
 }
-.gallery li a {
+
+.gallery ul a {
   text-decoration: none;
   color: #000;
 }
-.gallery li a:visited {
+.gallery ul a:visited {
+  text-decoration: none;
   color:#000;
 }
 
-.gallery li:hover {
+.gallery ul li:hover {
   top: -2px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
 }
@@ -287,7 +274,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 2em;
 }
 
