@@ -300,6 +300,7 @@ section.myprojects {
   width: 100vw;
   display: grid;
   justify-items: center;
+  justify-content: center;
   padding: 0;
   grid-template-columns: repeat(auto-fit, minmax(250px, .75fr));
   grid-gap: 1.2rem;
