@@ -283,14 +283,14 @@ section.myprojects {
 
 /* GALLERY */
 .gallery {
-  display: flex;
   height: auto;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 1% 0%;
-  column-gap: 5%;
+  column-gap: 1%;
+  row-gap: 1%;
   background-color: rgba(213, 248, 231);
   width: 100vw;
-  overflow: hidden;
   justify-items: center;
   align-items: center;
 }
@@ -300,10 +300,10 @@ section.myprojects {
   width: 100vw;
   display: grid;
   justify-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 0;
-  grid-template-columns: repeat(auto-fit, minmax(250px, .75fr));
-  grid-gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, 350px);
+  gap: 1rem;
 }
 
 .gallery ul li {
