@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "TODO Android App"
+date:   2022-04-08 13:15:16 -0700
+category: Web/Mobile Apps
+desc: Design and Implementation of Android App.
+previewpic: "assets/images/LoginActivity1.png"
+---
+![todoapp]({{ site.url }}/assets/images/LoginActivity1.png "Launch screen")  
+
+* Created design specifications and UML for an Android App utilizing the Model-View-Controller Architecture.
+* Implemented design into a demo app with Java in Android Studio.
+![Mobile Apps]({{ site.url }}/assets/images/TODO_LIST.png "uml") 
+
+
