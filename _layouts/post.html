@@ -2,41 +2,57 @@
 layout: default
 ---
 <section class="project">
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="section-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
-  <div class = "links">
-    <ul>
-    {%- if page.github-repo -%}
-      <li>
-      <a href="{{ page.github-repo }}">
-        <i class="fa-brands fa-github" width="100px" height="100px"></i> <span class="username">Github Repository</span></a>
-      </li>
-    {%- endif -%}
-    {%- if page.live-site -%}
-      <li>
-      <a href="{{ page.live-site }}">
-        Visit live site.
-      </a>
-      </li>
-    {%- endif -%}
-    </ul>
-  </div>
+    <header class="post-header">
+      <h1 class="section-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+            itemprop="name">{{ page.author }}</span></span>
+        {%- endif -%}</p>
+    </header>
+    <div class="links">
+      <ul>
+        {%- if page.github-repo -%}
+        <li>
+          <a href="{{ page.github-repo }}">
+            <i class="fa-brands fa-github" width="100px" height="100px"></i> <span class="username">Github
+              Repository</span></a>
+        </li>
+        {%- endif -%}
+        {%- if page.live-site -%}
+        <li>
+          <a href="{{ page.live-site }}">
+            Visit live site.
+          </a>
+        </li>
+        {%- endif -%}
+        {%- if page.youtube-link -%}
+        <li>
+          <a href="{{ page.youtube-link }}">
+            View Demo on Youtube
+          </a>
+        </li>
+        {%- endif -%}
+      </ul>
+    </div>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
 
-  {%- if site.disqus.shortname -%}
+    <div class="post-content e-content" itemprop="articleBody">
+      {%- if page.video-demo -%}
+      <video width="400" height="800" controls poster="{{ page.video-poster }}">
+        <source src="{{ page.video-demo }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      {%- endif -%}
+      {{ content }}
+    </div>
+
+    {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
-  {%- endif -%}
+    {%- endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
-</div>
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  </article>
+  </div>
