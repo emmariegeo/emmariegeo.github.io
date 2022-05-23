@@ -186,7 +186,7 @@ section.about .info {
 }
 
 section.about .info p {
-  padding: 2%;
+  padding: 2% 0%;
 }
 
 section.about.skills {
@@ -213,10 +213,11 @@ section.about.skills>ul {
 
 section.about.skills>ul>li {
   display: flex;
+  align-content: center;
   flex-grow: 1;
   list-style: none;
   flex-direction: column;
-  background-color: #ffffffe6;
+  background-color: rgba(213, 248, 231);
   border-color: rgba(213, 248, 231);
   border-width: 4px;
   padding: 2%;
@@ -449,6 +450,9 @@ h4 {
   section.about .info {
     align-items: center;
   }
+  section.about .info p {
+    text-align: center;
+  }
 
   section.about .card {
     padding: 1% 1% 4% 1%;
@@ -514,9 +518,6 @@ h4 {
     margin-top: 0px;
   }
 
-  section.about.skills ul {
-    padding-inline-start: 20px;
-  }
 
   section.about.skills li {
     font-size: 1em;

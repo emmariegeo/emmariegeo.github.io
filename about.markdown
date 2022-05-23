@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /about/
-profilepic: "assets/images/emmapicture.png"
+profilepic: "assets/images/emmapicture.webp"
 ---
  
 - ## Education ##
@@ -23,12 +23,24 @@ profilepic: "assets/images/emmapicture.png"
     - CSS
     - Java
     - Python
+    - SQL
     - Liquid
 
-- ## Design Software ##
+- ## Computer Software ##
 
+    - Microsoft Office
     - Adobe Illustrator
     - Adobe InDesign
     - Adobe Photoshop
+    - Adobe Premiere Pro
     - Adobe XD
     - Figma
+    - Autodesk Maya
+    - SolidWorks
+
+- ## Projects & Documentation ##
+
+    - Technical Writing
+    - User Experience Design
+    - User Interface Design
+    - Agile Methodologies
