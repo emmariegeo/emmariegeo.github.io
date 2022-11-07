@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang='{{ page.lang | default: site.lang | default: "en" }}'>
+    {%- include head.html -%}
+  <body>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <section class="home">
+            <div class = "moved">
+                <p><h1 class="hero-text">{{ content }}</h1></p>
+            </div>
+          </section>
+      </div>
+    </main>
+  </body>
+
+</html>

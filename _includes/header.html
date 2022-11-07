@@ -12,7 +12,7 @@
  
          <ul class="nav" id="nav">
             <li class="nav-item">
-              <a href='{{ "/" | relative_url }}'>{{ "Home" | escape }}</a>
+              <a href='{{ "/home" | relative_url }}'>{{ "Home" | escape }}</a>
             </li>
            {%- for path in page_paths -%}
              {%- assign my_page = site.pages | where: "path", path | first -%}
